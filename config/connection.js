@@ -14,7 +14,7 @@ if (process.env.JAWSDB_URL) {
         port: 3306,
         user: "root",
         password: event.password,
-        database: "event_db"
+        database: "events_db"
     });
 };
 // Make connection.
