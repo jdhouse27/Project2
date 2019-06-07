@@ -1,5 +1,49 @@
-.list-group-item {
-  line-height: 2.5;
+#addEvent {
+    background-color: transparent;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: auto;
+    width: auto;
+    border-radius: 8%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC:400,700');
 
+button {
+    color: antiquewhite;
+    text-shadow: 2px 2px 4px black;
+    border-radius: 5px;
+    background-color: #3f3626;
+    width: 50%;
+}
+
+.carousel {
+    background-position: center;
+    background-size: cover;
+    height: 700px;
+    position: relative;
+    background-repeat: no-repeat;
+}
+
+body {
+    color: black;
+    text-shadow: 2px 2px 4px antiquewhite;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1 {
+    text-align: center;
+}
+
+#new-event {
+    padding: 10%;
+    border: none;
+    margin: 5%;
+}
+
+#dropdownMenu2 {
+    width: 100%;
+}

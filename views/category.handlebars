@@ -1,0 +1,98 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-6">
+      <div id="addEvent">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Select Category
+          </button>
+
+{{!-- this buttons should be loaded via handlebars and should provide a path for our second API search --}} 
+  
+{{!-- review {{#each categories} | } --}}
+                          {{!--  V --}}
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <button class="dropdown-item" type="button">Bars and Breweries</button>
+            <button class="dropdown-item" type="button">Restaurants</button>
+            <button class="dropdown-item" type="button">Sporting Events</button>
+            <button class="dropdown-item" type="button">Museums</button>
+            <button class="dropdown-item" type="button">Libraries</button>
+            <button class="dropdown-item" type="button">Shopping</button>
+            <button class="dropdown-item" type="button">Parks</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+{{!-- only load this if present --}}
+{{!-- consider researching timeline --}}
+{{!-- add print option --}}
+      <div id="new-event" class="card" style="width: 18rem;">
+        <h2 class="card-title">Itinerary</h2>
+        <ul class="list-group list-group-flush">
+          {{#each event}}
+            <div>
+              <li class="newEvent">{{event_name}}</li>
+              <li class="newEvent">{{event_address}}</li>
+              <li class="newEvent">{{event_date}}</li>
+              <br>
+              <button id="remove-btn" class="remove-status" data-id="{{id}}"><Center>Remove</Center></button>
+              <br>
+              <hr>
+            </div>
+          {{/each}}
+        </ul>
+      </div>
+    </div>  
+  </div>
+</div>
+
+
+<script>
+$(function() {
+  $(".remove-status").on("click", function(event) {
+    let id = $(this).data("id");
+
+    let newStatusState = {
+      active: false
+    };
+
+    // Send the PUT request.
+    $.ajax("/api/event/" + id, {
+      type: "PUT",
+      data: newStatusState
+    }).then(
+      function() {
+        console.log("event remove");
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
+  });
+
+  $(".create-event").on("submit", function(event) {
+    // Make sure to preventDefault on a submit event.
+    event.preventDefault();
+
+      let newEvent = {
+        event_name: $("#event").val().trim(),
+        // event_date: $("#event").val().trim(),
+        // event_address: $("#event").val().trim(),
+        active: true
+      };
+
+    // Send the POST request.
+    $.ajax("/api/event/", {
+      type: "POST",
+      data: newevent
+    }).then(
+      function() {
+        console.log("created new event");
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
+  });
+});
+</script>
