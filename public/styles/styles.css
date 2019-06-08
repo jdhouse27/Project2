@@ -1,12 +1,14 @@
 #addEvent {
-    background-color: transparent;
+    background-color: antiquewhite;
+    opacity: .8;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     height: auto;
-    width: auto;
+    width: 70%;
     border-radius: 8%;
-    margin-left: auto;
-    margin-right: auto;
     text-align: center;
+    font-size: 1.5em;
+    margin: auto;
+    top: 40%;
 }
 
 button {
@@ -17,17 +19,23 @@ button {
     width: 50%;
 }
 
-.carousel {
+body {
+    background-image: url("../images/test.jpeg");
     background-position: center;
     background-size: cover;
     height: 700px;
     position: relative;
     background-repeat: no-repeat;
+    background-color: black;
+    text-shadow: 2px 2px 4px antiquewhite;
 }
 
-body {
-    color: black;
-    text-shadow: 2px 2px 4px antiquewhite;
+#logo {
+    background-image: url("../images/Scenic_logo_4.png");
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 li {
@@ -39,11 +47,82 @@ h1 {
 }
 
 #new-event {
-    padding: 10%;
+    height: auto;
+    width: 20%;
+    text-align: center;
+    font-size: 1.2em;
+    margin: auto;
     border: none;
-    margin: 5%;
 }
 
 #dropdownMenu2 {
     width: 100%;
+}
+
+#image1 {
+    background-image: url("../images/brewery.jpg");
+    width: 250px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#image2 {
+    background-image: url("../images/restaurant.jpg");
+    width: 250px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#image3 {
+    background-image: url("../images/sporting.jpg");
+    width: 250px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#image4 {
+    background-image: url("../images/Museum.jpg");
+    width: 250px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#image5 {
+    background-image: url("../images/library.jpg");
+    width: 250px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#image6 {
+    background-image: url("../images/shopping.jpg");
+    width: 250px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#image7 {
+    background-image: url("../images/park.jpg");
+    width: 250px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#image8 {
+    background-image: url("../images/photo_3.jpg");
+    width: 250px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#slider {
+    top: 70%;
 }
