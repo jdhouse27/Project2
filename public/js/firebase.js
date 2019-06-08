@@ -14,4 +14,3 @@ var appFireBase = {};
 
      appFireBase = firebase;
 })()
-
