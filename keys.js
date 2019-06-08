@@ -2,3 +2,7 @@
 exports.event = {
   password: process.env.EVENT_ID
 };
+
+exports.jawsId = {
+  password: process.env.JAWSDB_ID
+};
