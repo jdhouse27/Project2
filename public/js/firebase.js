@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 var appFireBase = (function() {
   var config = {
-    apiKey: "AIzaSyDVhHGHb6hXl3LvveyiAWp3DLzNIp7yp6I",
+    apiKey: firebase.password,
     authDomain: "scenic-pro2.firebaseapp.com",
     databaseURL: "https://scenic-pro2.firebaseio.com",
     projectId: "scenic-pro2",
