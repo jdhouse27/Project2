@@ -31,12 +31,18 @@ body {
     color: black;
 }
 
+
+body {
+    color: black;
+   
+=======
 #logo {
     background-image: url("../images/Scenic_logo_4.png");
     width: 200px;
     height: 200px;
     margin-left: auto;
     margin-right: auto;
+
 }
 
 li {
@@ -56,8 +62,11 @@ h1 {
     border: none;
 }
 
-
 /* Matt CSS Begin*/
+
+#dropdownMenu2 {
+    width: 100%;
+}
 
 #autocomplete {
     font-family: 'Raleway', sans-serif;
@@ -107,7 +116,6 @@ body {
         background-position: 100% 100%;
     }
 }
-
 
 /* Matt CSS End */
 
@@ -170,3 +178,4 @@ body {
 #slider {
     top: 70%;
 }
+

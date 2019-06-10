@@ -10,7 +10,7 @@ var appFireBase = (function() {
     appId: "1:755781268373:web:ca9d87ccca610859"
   };
 
-  firebase.initializeApp(config);
+     firebase.initializeApp(config);
 
-  appFireBase = firebase;
-})();
+     appFireBase = firebase;
+})()
