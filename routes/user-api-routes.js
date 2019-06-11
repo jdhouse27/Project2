@@ -11,7 +11,7 @@ var db = require("../models");
 // Routes
 // =============================================================
 module.exports = function(app) {
-  // GET route for getting events 
+  // GET route for getting events
   app.get("/api/user/", function(req, res) {
     db.Events.findAll({
       include: [db.Events]

@@ -22,7 +22,7 @@ module.exports = function(app) {
   });
 
   // location route loads category.handlebars
-  app.get("/location", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/category.handlebars"));
+  app.get("/category", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/category.html"));
   });
 };

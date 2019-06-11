@@ -19,9 +19,10 @@ $(document).ready(function() {
         userId = url.split("=")[1];
         getEvents(userId);
     }
-    // If there's no userId we just get all events as usual
+    // If there's no userId we use dummy user for functionality
     else {
-        getEvents();
+        userId = createUserId
+        getEvents(userId);
     }
     //get events associated with user login 
     function getEvents(user) {
@@ -37,13 +38,14 @@ $(document).ready(function() {
             });
         });
     };
+
     //remove events user no-longer wants
     $(".remove-status").on("click", function(events) {
         let id = $(this).data("id");
         // Delete event
         $.ajax({
             method: "DELETE",
-            url: "/api/posts/" + id
+            url: "/api/events/" + id
         }).then(
             function() {
                 console.log("event remove");

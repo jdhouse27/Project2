@@ -6,8 +6,10 @@ exports.event = {
 exports.jawsId = {
   password: process.env.JAWSDB_ID
 };
+exports.jaws = {
+  password: process.env.JAWS_ID
+};
 
 exports.firebase = {
   password: process.env.FIREBASE_ID
 };
-;

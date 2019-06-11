@@ -1,9 +1,6 @@
 $(document).ready(function() {
     // Getting references to the name input and user container, as well as the table body
     let nameInput = $("#user-name");
-    let userContainer = $(".user-container");
-    // Adding event listeners to the form to create a new object
-    $(document).on("submit", "#user-form", handleUserFormSubmit);
 
     // A function to handle what happens when the form is submitted to create a new User
     function handleUserFormSubmit(event) {
@@ -37,21 +34,6 @@ $(document).ready(function() {
             renderUserList(rowsToAdd);
             nameInput.val("");
         });
-    }
-
-    // A function for rendering the list of users to the page
-    function renderUserList(rows) {
-        userList
-            .children()
-            .not(":last")
-            .remove();
-        userContainer.children(".alert").remove();
-        if (rows.length) {
-            console.log(rows);
-            userList.prepend(rows);
-        } else {
-            renderEmpty();
-        }
     }
 
     // Function for handling what to render when there are no users
