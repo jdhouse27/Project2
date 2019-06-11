@@ -1,4 +1,4 @@
-#addCategory {
+    #addCategory {
     background-color: antiquewhite;
     opacity: .8;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -36,148 +36,130 @@ body {
     width: 100%;
 }
 
-#logo {
-    background-image: url("../images/Scenic_logo_4.png");
-    width: 200px;
-    height: 200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-li {
-    list-style-type: none;
-}
-
-h1 {
-    text-align: center;
-}
-
-#new-event {
-    height: auto;
-    width: 20%;
-    text-align: center;
-    font-size: 1.2em;
-    margin: auto;
-    border: none;
-}
-
-.logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-/* Matt CSS Begin*/
-
-#autocomplete {
-    font-family: 'Raleway', sans-serif;
-}
-
-@keyframes float {
-    to {
-        transform: translateY(0.75em);
-    }
-}
-
-* {
-    margin: 0;
-}
-
-#check {
-    position: absolute;
-    right: 100vw;
-}
-
 body {
-    width: 100%;
-    height: 100%;
-    /* margin: 0em 5%; */
-    background-color: #8ec1da;
-    background-image: url("http://vollnixx.files.wordpress.com/2013/12/clouds_real.jpg");
-    background-position: center bottom;
-    animation: animatedBackground 30s linear infinite;
-    /* Safari and Chrome: */
-    -webkit-animation: animatedBackground 30s linear infinite;
-}
-
-@keyframes animatedBackground {
-    from {
-        background-position: 0 100%;
+    color: black;
+    #logo {
+        background-image: url("../images/Scenic_logo_4.png");
+        width: 200px;
+        height: 200px;
+        margin-left: auto;
+        margin-right: auto;
     }
-    to {
-        background-position: 100% 100%;
+    li {
+        list-style-type: none;
     }
-}
-
-@-webkit-keyframes animatedBackground {
-    from {
-        background-position: 0 100%;
+    h1 {
+        text-align: center;
     }
-    to {
-        background-position: 100% 100%;
+    #new-event {
+        height: auto;
+        width: 20%;
+        text-align: center;
+        font-size: 1.2em;
+        margin: auto;
+        border: none;
     }
-}
-
-
-/* Matt CSS End */
-
-#image1 {
-    background-image: url("../images/brewery.jpg");
-    width: 250px;
-    height: 250px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#image2 {
-    background-image: url("../images/restaurant.jpg");
-    width: 250px;
-    height: 250px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#image3 {
-    background-image: url("../images/sporting.jpg");
-    width: 250px;
-    height: 250px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#image4 {
-    background-image: url("../images/Museum.jpg");
-    width: 250px;
-    height: 250px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#image5 {
-    background-image: url("../images/library.jpg");
-    width: 250px;
-    height: 250px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#image6 {
-    background-image: url("../images/shopping.jpg");
-    width: 250px;
-    height: 250px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#image7 {
-    background-image: url("../images/park.jpg");
-    width: 250px;
-    height: 250px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#slider {
-    top: 70%;
-}
+    .logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* Matt CSS Begin*/
+    #dropdownMenu2 {
+        width: 100%;
+    }
+    #autocomplete {
+        font-family: 'Raleway', sans-serif;
+    }
+    @keyframes float {
+        to {
+            transform: translateY(0.75em);
+        }
+    }
+    * {
+        margin: 0;
+    }
+    #check {
+        position: absolute;
+        right: 100vw;
+    }
+    body {
+        width: 100%;
+        height: 100%;
+        /* margin: 0em 5%; */
+        background-color: #8ec1da;
+        background-image: url("http://vollnixx.files.wordpress.com/2013/12/clouds_real.jpg");
+        background-position: center bottom;
+        animation: animatedBackground 30s linear infinite;
+        /* Safari and Chrome: */
+        -webkit-animation: animatedBackground 30s linear infinite;
+    }
+    @keyframes animatedBackground {
+        from {
+            background-position: 0 100%;
+        }
+        to {
+            background-position: 100% 100%;
+        }
+    }
+    @-webkit-keyframes animatedBackground {
+        from {
+            background-position: 0 100%;
+        }
+        to {
+            background-position: 100% 100%;
+        }
+    }
+    /* Matt CSS End */
+    #image1 {
+        background-image: url("../images/brewery.jpg");
+        width: 250px;
+        height: 250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #image2 {
+        background-image: url("../images/restaurant.jpg");
+        width: 250px;
+        height: 250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #image3 {
+        background-image: url("../images/sporting.jpg");
+        width: 250px;
+        height: 250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #image4 {
+        background-image: url("../images/Museum.jpg");
+        width: 250px;
+        height: 250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #image5 {
+        background-image: url("../images/library.jpg");
+        width: 250px;
+        height: 250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #image6 {
+        background-image: url("../images/shopping.jpg");
+        width: 250px;
+        height: 250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #image7 {
+        background-image: url("../images/park.jpg");
+        width: 250px;
+        height: 250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #slider {
+        top: 70%;
+    }
