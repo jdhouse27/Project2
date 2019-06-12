@@ -139,60 +139,81 @@
     
     #image1 {
         background-image: url("../images/brewery.jpg");
-        width: 250px;
-        height: 250px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 200px;
         margin-left: auto;
         margin-right: auto;
     }
     
     #image2 {
         background-image: url("../images/restaurant.jpg");
-        width: 250px;
-        height: 250px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 200px;
         margin-left: auto;
         margin-right: auto;
     }
     
     #image3 {
         background-image: url("../images/sporting.jpg");
-        width: 250px;
-        height: 250px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 200px;
         margin-left: auto;
         margin-right: auto;
     }
     
     #image4 {
         background-image: url("../images/Museum.jpg");
-        width: 250px;
-        height: 250px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 200px;
         margin-left: auto;
         margin-right: auto;
     }
     
     #image5 {
         background-image: url("../images/library.jpg");
-        width: 250px;
-        height: 250px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 200px;
         margin-left: auto;
         margin-right: auto;
     }
     
     #image6 {
         background-image: url("../images/shopping.jpg");
-        width: 250px;
-        height: 250px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 200px;
         margin-left: auto;
         margin-right: auto;
     }
     
     #image7 {
         background-image: url("../images/park.jpg");
-        width: 250px;
-        height: 250px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 200px;
         margin-left: auto;
         margin-right: auto;
     }
     
     #slider {
-        top: 70%;
+        top: 80%;
     }
