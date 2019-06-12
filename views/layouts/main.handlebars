@@ -13,6 +13,15 @@
   <!-- JQuery -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery.js"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <!-- Google -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet"  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVPtlKIIhwsJRmMiUtEvQKjgBlzEZ1ZfA&libraries=places"></script>
+  <!--  Firebase  -->
+  <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
   {{!-- CSS --}}
 	<link rel="stylesheet" type="text/css" href="../../public/styles/styles.css">
 </head>
@@ -20,12 +29,18 @@
 <body>
   <div class="uk-container">
     <div class="uk-grid-small uk-child-width-expand@s uk-text-center" uk-grid>
+      <div class="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle" id="back"></div>
       <div class="uk-width-3-4">
         <div>
           <p id="logo" class="uk-position-top-center"></p>
         </div>
       </div>
-      <div class="uk-width-1-4"></div>
+      <div class="uk-width-1-4">
+        <ul class="uk-list uk-link-text">
+          <li><a href="/login">Login</a></li>
+          {{!-- <li><a href="#">Create Account</a></li> --}}
+        </ul>
+      </div>
     <div>
     <div class="uk-grid">
       {{{ body }}}

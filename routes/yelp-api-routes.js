@@ -1,13 +1,9 @@
-// *********************************************************************************
-// api-routes.js - this file offers a set of routes for displaying and saving data to the db
-// *********************************************************************************
-
 // Dependencies
 // =============================================================
 
-// Requiring our user model
+// Requiring our yelp model
 var db = require("../models");
-
+var Yelp = require("../config/yelpApi.js");
 // Routes
 // =============================================================
 module.exports = function(app) {
@@ -37,6 +33,14 @@ module.exports = function(app) {
   app.post("/api/users", function(req, res) {
     db.User.create(req.body).then(function(dbUser) {
       res.json(dbUser);
+    });
+  });
+
+  //Catagories
+  app.post("/api/yelp", function(req, res) {
+    console.log(req.body);
+    Yelp.search(req.body.searchNow, req.body.location).then(function(yelpResponse) {
+      res.json(yelpResponse);
     });
   });
 };

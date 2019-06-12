@@ -1,29 +1,19 @@
 $(document).ready(function() {
-    getCategory();
-    //add user selected categories
-    function getCategory(category) {
-        $(".addCategory").on("click", function() {
-            let addToCategory = $(this).data("id");
-            $.get("/api/events" + addToCategory, function(data) {
-                events = data;
-                location.reload();
-                //consider adding if statement.  if added created displayEmpty function.
-            });
-        });
-    };
-
     //search for user
     let url = window.location.search;
     let userId;
     if (url.indexOf("?user_id=") !== -1) {
         userId = url.split("=")[1];
         getEvents(userId);
+        console.log(userId);
     }
     // If there's no userId we use dummy user for functionality
     else {
-        userId = createUserId
+        userId = "Home"
         getEvents(userId);
     }
+
+
     //get events associated with user login 
     function getEvents(user) {
         $("#new-event").on("click", function(events) {
