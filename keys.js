@@ -13,3 +13,7 @@ exports.jaws = {
 exports.firebase = {
   password: process.env.FIREBASE_ID
 };
+
+exports.yelpApiPass = {
+  password: process.env.YELP_ID
+};
