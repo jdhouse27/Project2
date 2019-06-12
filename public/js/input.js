@@ -14,7 +14,7 @@ $(document).ready(function() {
 
             window.location.href = "/category";
 
-            var geocoder = new google.maps.Geocoder();
+            let geocoder = new google.maps.Geocoder();
 
             geocoder.geocode({ location: address }, function(results, status) {
                 if (status === google.maps.GeocoderStatus.OK) {
@@ -30,51 +30,34 @@ $(document).ready(function() {
 });
 
 let searchNow;
-let categoryContainer = $("#category")
+let categoryContainer = [];
+let selectedCat;
 
 $(".addCategory").on("click", function() {
     searchNow = $(this).data('id');
     console.log(searchNow);
     localStorage.setItem("searchNow", searchNow);
     const location = localStorage.getItem("location")
-    showCategory({ searchNow: searchNow, location: location });
+    findCategory({ searchNow: searchNow, location: location });
 })
 
-function showCategory(Yelp) {
+function findCategory(Yelp) {
     $.ajax({
         method: "POST",
         url: "/api/yelp",
         data: Yelp
-    }).then(function(response) {
-        console.log(response);
-
+    }).then(function(data) {
+        for (let i = 0; i < data.length; i++) {
+            categoryContainer = {
+                name: data[i].name,
+                address: data[i].address,
+                city: data[i].city,
+                rating: data[i].rating,
+                price: data[i].price
+            };
+            data[i].latitude;
+            data[i].location;
+            console.log(categoryContainer);
+        };
     });
 }
-// });
-// //Catagories:Bars
-// app.get("/api/yelp", function(req, res) {
-//   yelp.search("Bars", $("#city")).then(function(yelpResponse) { res.json(yelpResponse) })
-// });
-// //Catagories:Restaurants
-// app.get("/api/yelp", function(req, res) {
-//   yelp.search("Restaurants", $("#city")).then(function(yelpResponse) { res.json(yelpResponse) })
-// });
-// //Catagories:Sporting Events
-// app.get("/api/yelp", function(req, res) {
-//   yelp.search("Sporting Events", $("#city")).then(function(yelpResponse) { res.json(yelpResponse) })
-// });
-// //Catagories:Museums
-// app.get("/api/yelp", function(req, res) {
-//   yelp.search("Museums", $("#city")).then(function(yelpResponse) { res.json(yelpResponse) })
-// });
-// //Catagories:Libraries
-// app.get("/api/yelp", function(req, res) {
-//   yelp.search("Libraries", $("#city")).then(function(yelpResponse) { res.json(yelpResponse) })
-// });
-// //Catagories:Shopping
-// app.get("/api/yelp", function(req, res) {
-//   yelp.search("Shopping", $("#city")).then(function(yelpResponse) { res.json(yelpResponse) })
-// });
-
-// });
-// }
