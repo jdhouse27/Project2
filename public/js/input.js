@@ -30,8 +30,6 @@ $(document).ready(function() {
 });
 
 let searchNow;
-let categoryContainer = [];
-let selectedCat;
 
 $(".addCategory").on("click", function() {
     searchNow = $(this).data('id');
@@ -48,16 +46,53 @@ function findCategory(Yelp) {
         data: Yelp
     }).then(function(data) {
         for (let i = 0; i < data.length; i++) {
-            categoryContainer = {
-                name: data[i].name,
-                address: data[i].address,
-                city: data[i].city,
-                rating: data[i].rating,
-                price: data[i].price
-            };
-            data[i].latitude;
-            data[i].location;
-            console.log(categoryContainer);
+            // console.log(data[i]);
+
+            let city = data[i].city;
+
+            let catLat = data[i].latitude;
+            let catLong = data[i].location;
+
+            let category = $("<div>");
+
+            let row = $("<dl>");
+            row.addClass("uk-description-list uk-description-list-divider");
+            let catName = $("<dt>").text(data[i].name);
+            let catAdd = $("<dd>").text(data[i].address);
+            let catRate = $("<dd>").text("Rating: " + data[i].rating);
+            let catPrice = $("<dd>").text("Price Range: " + data[i].price);
+            let createBtn = $("<button>").text("Add to Itinerary")
+
+            row.append(catName, catAdd, catRate, catPrice, createBtn);
+            console.log(row);
+            $("#category").append(row);
         };
+
     });
 }
+
+// function addCategory (catContainer) {
+
+//     for (let i = 0; i < data.length; i++) {
+//         console.log(data[i]);
+
+//         }
+// }
+
+// console.log(categoryContainer);
+// $("#category").append(categoryContainer);
+
+// let newSelectCat = $("<dl>");
+// newSelectCat.addClass("uk-description-list uk-description-list-divider");
+// let newSelectName = $("<dt>");
+// newSelectName.addId("catName");
+// let newSelectAdd = $("<dd>");
+// newSelectAdd.addId("catAdd");
+// let newSelectRate = $("<dt>");
+// newSelectRate.addId("catRate");
+// let newSelectPrice = $("<dd>");
+// newSelectPrice.addId("catPrice");
+// let addBtn = $("<button>");
+// addBtn.text("Add to Itinerary");
+// addBtn.addClass("create-event");
+// return ;
