@@ -1,0 +1,210 @@
+#addCategory {
+    background-color: antiquewhite;
+    opacity: .8;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: auto;
+    width: 70%;
+    border-radius: 2%;
+    text-align: center;
+    font-size: 1.5em;
+    margin: auto;
+    top: 40%;
+}
+
+button {
+    color: antiquewhite;
+    text-shadow: 2px 2px 4px black;
+    border-radius: 5px;
+    background-color: #3f3626;
+    width: 50%;
+}
+
+body {
+    background-image: url("../images/test.jpeg");
+    background-position: center;
+    background-size: cover;
+    height: 700px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-color: black;
+    text-shadow: 2px 2px 4px antiquewhite;
+    opacity: .9;
+}
+
+#logo {
+    background-image: url("../images/Scenic_logo_4.png");
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li {
+    list-style-type: none;
+}
+
+#new-event {
+    height: auto;
+    width: 20%;
+    text-align: center;
+    font-size: 1.2em;
+    margin: auto;
+    border: none;
+}
+
+#autocomplete {
+    font-family: 'Raleway', sans-serif;
+}
+
+@keyframes float {
+    to {
+        transform: translateY(0.75em);
+    }
+}
+
+* {
+    margin: 0;
+}
+
+#check {
+    position: absolute;
+    right: 100vw;
+}
+
+#container-img {
+    width: 100%;
+    height: 900px;
+    /* margin: 0em 5%; */
+    background-color: #8ec1da;
+    background-image: url("http://vollnixx.files.wordpress.com/2013/12/clouds_real.jpg");
+    background-position: center bottom;
+    animation: animatedBackground 30s linear infinite;
+    /* Safari and Chrome: */
+    -webkit-animation: animatedBackground 30s linear infinite;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-shadow: 2px 2px 4px antiquewhite;
+    color: black;
+}
+
+@keyframes animatedBackground {
+    from {
+        background-position: 0 100%;
+    }
+    to {
+        background-position: 100% 100%;
+    }
+}
+
+@-webkit-keyframes animatedBackground {
+    from {
+        background-position: 0 100%;
+    }
+    to {
+        background-position: 100% 100%;
+    }
+}
+
+#image1 {
+    background-image: url("../images/brewery.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#image2 {
+    background-image: url("../images/restaurant.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#image3 {
+    background-image: url("../images/photo_2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#image4 {
+    background-image: url("../images/sporting.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#image5 {
+    background-image: url("../images/Museum.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#image6 {
+    background-image: url("../images/library.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#image7 {
+    background-image: url("../images/shopping.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#image8 {
+    background-image: url("../images/park.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#slider {
+    top: 70%;
+}
+
+#category {
+    color: black;
+    text-shadow: 2px 2px 4px antiquewhite;
+    left: 10%;
+}
+
+.catTitle {
+    font-size: 1.5em;
+    color: rgb(107, 106, 106);
+    text-shadow: 2px 2px 4px antiquewhite;
+}

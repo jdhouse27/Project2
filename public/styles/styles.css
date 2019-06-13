@@ -8,7 +8,7 @@
         text-align: center;
         font-size: 1.5em;
         margin: auto;
-        top: 60%;
+        top: 40%;
     }
     
     button {
@@ -18,37 +18,21 @@
         background-color: #3f3626;
         width: 50%;
     }
-    
-    body {
-        /* background-image: url("../images/test.jpeg"); */
-        background-position: center;
-        background-size: cover;
-        /* height: 700px; */
-        position: relative;
-        background-repeat: no-repeat;
-        background-color: black;
-        text-shadow: 2px 2px 4px antiquewhite;
-    }
-    
-    #back {
+    /* #back {
         background-image: url("../images/test.jpeg");
         background-position: center;
         background-size: cover;
-        /* height: 700px; */
+        height: 900px;
         position: relative;
         background-repeat: no-repeat;
         background-color: black;
         text-shadow: 2px 2px 4px antiquewhite;
-    }
+    } */
     
     #container-img {
-        opacity: .8;
-        height: 100%;
+        opacity: .7;
+        height: 900px;
         width: 100%;
-    }
-    
-    body {
-        color: black;
     }
     
     #logo {
@@ -75,16 +59,12 @@
         margin: auto;
         border: none;
     }
+    /* Matt CSS Begin*/
     
     .logo {
         display: block;
         margin-left: auto;
         margin-right: auto;
-    }
-    /* Matt CSS Begin*/
-    
-    #dropdownMenu2 {
-        width: 100%;
     }
     
     #autocomplete {
@@ -108,7 +88,7 @@
     
     body {
         width: 100%;
-        height: 100%;
+        height: 900px;
         /* margin: 0em 5%; */
         background-color: #8ec1da;
         background-image: url("http://vollnixx.files.wordpress.com/2013/12/clouds_real.jpg");
@@ -116,6 +96,10 @@
         animation: animatedBackground 30s linear infinite;
         /* Safari and Chrome: */
         -webkit-animation: animatedBackground 30s linear infinite;
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-shadow: 2px 2px 4px antiquewhite;
+        color: black;
     }
     
     @keyframes animatedBackground {
@@ -142,8 +126,8 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -153,67 +137,90 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
         margin-left: auto;
         margin-right: auto;
     }
     
     #image3 {
-        background-image: url("../images/sporting.jpg");
+        background-image: url("../images/photo_2.jpg");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
         margin-left: auto;
         margin-right: auto;
     }
     
     #image4 {
-        background-image: url("../images/Museum.jpg");
+        background-image: url("../images/sporting.jpg");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
         margin-left: auto;
         margin-right: auto;
     }
     
     #image5 {
-        background-image: url("../images/library.jpg");
+        background-image: url("../images/Museum.jpg");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
         margin-left: auto;
         margin-right: auto;
     }
     
     #image6 {
-        background-image: url("../images/shopping.jpg");
+        background-image: url("../images/library.jpg");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
         margin-left: auto;
         margin-right: auto;
     }
     
     #image7 {
+        background-image: url("../images/shopping.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 250px;
+        height: 250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #image8 {
         background-image: url("../images/park.jpg");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
         margin-left: auto;
         margin-right: auto;
     }
     
     #slider {
         top: 80%;
+    }
+    
+    #category {
+        color: black;
+        text-shadow: 2px 2px 4px antiquewhite;
+        left: 10%;
+    }
+    
+    .catTitle {
+        font-size: 1.5em;
+        color: black;
+        text-shadow: 2px 2px 4px antiquewhite;
     }
