@@ -2,5 +2,6 @@
     
     height:600px;
     width:100%;
-    margin-top: 750px;
+    margin-top: 450px;
+    z-index: 5;
  }

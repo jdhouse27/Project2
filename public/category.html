@@ -136,6 +136,100 @@
             <div id="category" class="uk-modal-body" uk-overflow-auto></div>
         </div>
     </div>
+
+    <div class="uk-section">
+        <div class="uk-container"></div>
+        <div id="map"></div>
+        <script
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVPtlKIIhwsJRmMiUtEvQKjgBlzEZ1ZfA">
+        </script>
+        <script>
+ 
+                 //   var lat = (props.lat);
+                 //   var lng = (props.lng);
+            function initMap(lat, lng) {
+                //Map Options
+ 
+                var options = {
+                    zoom: 10,
+                    center: { lat: lat, lng: lng },
+ 
+                };
+                //console.log(data.results);
+                //console.log(props)
+               // console.log(lng)
+                //New Map
+                var map = new google.maps.Map(document.getElementById("map"), options);
+ 
+ 
+            }
+            var geoAPI = "&key=AIzaSyBVPtlKIIhwsJRmMiUtEvQKjgBlzEZ1ZfA";
+            var inputLocation = localStorage.getItem("location")
+            $.ajax({
+                    url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + inputLocation + geoAPI,
+                    type: "GET",
+                }).done(function (data) {
+                    console.log(data.results[0].geometry);
+                    var lat = data.results[0].geometry.location.lat;
+                    var lng = data.results[0].geometry.location.lng;
+                    // addMarker2({ lng, lat });
+                    initMap(lat, lng);
+ 
+                    //     var lat = data[i].location_1.coordinates[1];
+                });
+ 
+ function addMarker(props) {
+                    //console.log(props);
+                    var marker = new google.maps.Marker({
+                        position: props,
+                        map: map
+                    });
+ 
+                    if (props.content) {
+                        var infoWindow = new google.maps.InfoWindow({
+                            content: props.content
+                        });
+                        marker.addListener("click", function () {
+                            infoWindow.open(map, marker);
+                        });
+                    }
+                }
+                function addMarker2(props) {
+                    console.log(props);
+                    var marker = new
+                        google.maps.Marker({
+                            position: props,
+                            map: map,
+ 
+ 
+                        });
+                };
+ 
+ 
+ 
+            console.log(localStorage.getItem("location"))
+            function addMarker(props) {
+                console.log(props);
+                var marker = new
+                    google.maps.Marker({
+                        position: props,
+                        map: map,
+ 
+                    });
+ 
+                if (props.content) {
+                    var infoWindow = new
+                        google.maps.InfoWindow({
+                            content: props.content
+                        });
+                    marker.addListener('click', function () {
+                        infoWindow.open(map, marker);
+                    })
+                }
+            }
+ 
+        </script>
+    </div>
     <script src="./js/input.js " type="text/javascript "></script>
     <script src="./js/event-maintain.js " type="text/javascript "></script>
 
