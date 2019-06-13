@@ -1,33 +1,31 @@
-let address;
+//let address;
 //Grab address from input field after pressing enter
 $(document).ready(function() {
-    $(document).keyup(function(event) {
-        localStorage.setItem("key", event.key);
-        if ($("#autocomplete").is(":focus") && event.key === "Enter") {
-            address = $("#autocomplete")
-                .val()
-                .trim();
+   $(document).keyup(function(event) {
+     localStorage.setItem("key", event.key)
+       if ($("#autocomplete").is(":focus") && event.key == "Enter") {
+         var address = $('#autocomplete').val().trim();
+         localStorage.clear();
+         localStorage.setItem("location", address);
+         console.log(event.key)
+         window.location.assign("category.html");
 
-            localStorage.clear();
-            localStorage.setItem("location", address);
-            console.log(event.key);
+           var geocoder = new google.maps.Geocoder();
 
-            window.location.href = "/category";
+           console.log(address)
+           geocoder.geocode( { 'location': address}, function(results, status) {
 
-            let geocoder = new google.maps.Geocoder();
-
-            geocoder.geocode({ location: address }, function(results, status) {
-                if (status === google.maps.GeocoderStatus.OK) {
-                    console.log(results);
-                    var latitude = results[0].geometry.location.lat();
-                    var longitude = results[0].geometry.location.lng();
-                    $("#coordinates").val(latitude + ", " + longitude);
-                    console.log(latitude, longitude);
-                }
-            });
-        }
-    });
-});
+           if (status == google.maps.GeocoderStatus.OK) {
+               var latitude = results[0].geometry.location.lat();
+               var longitude = results[0].geometry.location.lng();
+               $('#coordinates').val(latitude+', '+longitude);
+               console.log(Geocoder);
+               console.log(latitude, longitude);
+               }
+           });
+       }
+   });
+ });
 
 let searchNow;
 
