@@ -8,7 +8,7 @@
     text-align: center;
     font-size: 1.5em;
     margin: auto;
-    top: 40%;
+    top: 25%;
 }
 
 button {
@@ -23,7 +23,7 @@ body {
     background-image: url("../images/test.jpeg");
     background-position: center;
     background-size: cover;
-    height: 700px;
+    height: 900px;
     position: relative;
     background-repeat: no-repeat;
     background-color: black;
@@ -194,13 +194,14 @@ li {
 }
 
 #slider {
-    top: 70%;
+    top: 40%;
 }
 
 #category {
     color: black;
     text-shadow: 2px 2px 4px antiquewhite;
     left: 10%;
+    top: 60%
 }
 
 .catTitle {

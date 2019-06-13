@@ -2,7 +2,7 @@ $(document).ready(function() {
     // Getting references to the user information
     let user = $("#user-name");
 
-    function
+
 
     // A function for creating an user. Calls getUsers upon completion
     function upsertUser(userData) {

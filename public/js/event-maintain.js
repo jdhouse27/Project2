@@ -48,8 +48,10 @@ $(document).ready(function() {
     $(".create-event").on("click", function(events) {
         // Make sure to preventDefault on a submit event.
         // event.preventDefault();
+
         let newEvent = {
             event_name: $("#event").val().trim(),
+
             active: true
         };
 
@@ -65,6 +67,8 @@ $(document).ready(function() {
             }
         );
     });
+
+
     //change location to new location.
     $(".location-status").on("click", function(events) {
         let newLocation = {
