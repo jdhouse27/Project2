@@ -22,8 +22,9 @@ app.engine(
 app.set("view engine", "handlebars");
 
 // Routes
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
+require("./routes/htmlRoutes.js")(app);
+require("./routes/user-event-api-routes.js")(app);
+require("./routes/yelp-api-routes.js")(app);
 
 var syncOptions = { force: false };
 
