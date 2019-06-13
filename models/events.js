@@ -16,12 +16,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.TEXT,
       allowNull: false,
       len: [1]
-    },
-    eventDate: {
-      type: DataTypes.DATE,
-      len: [1]
     }
-
     // active: DataTypes.BOOLEAN,
     // userId: DataTypes.INTEGER
   });

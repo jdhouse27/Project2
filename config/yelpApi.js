@@ -6,7 +6,7 @@ const auth = {
 
 const Yelp = {
     search: function(term, searchLocation) {
-        return axios.get(`https://api.yelp.com/v3/businesses/search?term=${term}&location=${searchLocation}&limit=10`, {
+        return axios.get(`https://api.yelp.com/v3/businesses/search?term=${term}&location=${searchLocation}&limit=5`, {
             headers: {
                 Authorization: `Bearer ${apiKey}`
             }

@@ -28,6 +28,8 @@ $(document).ready(function() {
  });
 
 let searchNow;
+let eventToAdd;
+let resultsReturn;
 
 $(".addCategory").on("click", function() {
     searchNow = $(this).data('id');
@@ -35,7 +37,23 @@ $(".addCategory").on("click", function() {
     localStorage.setItem("searchNow", searchNow);
     const location = localStorage.getItem("location")
     findCategory({ searchNow: searchNow, location: location });
+    UIkit.modal($("#catModal")).show();
 })
+
+$("#newSearchItem").keyup(function(event) {
+    if ($("#newSearchItem") && event.key === "Enter") {
+        searchItem = $("#newSearchItem")
+            .val()
+            .trim();
+        console.log(searchItem);
+        // locatStorage.getItem("searchNow").clear();
+        localStorage.setItem("searchNow", searchItem);
+
+        const location = localStorage.getItem("location")
+        findCategory({ searchNow: searchItem, location: location });
+        UIkit.modal($("#catModal")).show();
+    }
+});
 
 function findCategory(Yelp) {
     $.ajax({
@@ -43,54 +61,52 @@ function findCategory(Yelp) {
         url: "/api/yelp",
         data: Yelp
     }).then(function(data) {
+        $("#category").empty();
         for (let i = 0; i < data.length; i++) {
             // console.log(data[i]);
-
-            let city = data[i].city;
-
             let catLat = data[i].latitude;
             let catLong = data[i].location;
+            let catCategory = data[i].category;
 
-            let category = $("<div>");
-
-            let row = $("<dl>");
-            row.addClass("uk-description-list uk-description-list-divider");
+            let newRow = $("<dl>");
+            let newRowclass = ("uk-description-list uk-description-list-divider newRow" + [i]);
+            newRow.addClass(newRowclass);
+            newRow.attr("data-id", data[i].name);
             let catName = $("<dt>").text(data[i].name);
-            let catAdd = $("<dd>").text(data[i].address);
-            let catRate = $("<dd>").text("Rating: " + data[i].rating);
-            let catPrice = $("<dd>").text("Price Range: " + data[i].price);
+            let newClassName = ("addName" + [i]);
+            catName.addClass(newClassName);
+            // catName.attr("data-id", data[i].name);
+            let catAdd = $("<dd>").text("+ " + data[i].address + ", " + data[i].city);
+            catAdd.addClass("catAdd");
+            // catAdd.attr("data-id", (data[i].address + ", " + data[i].city));
+            let catRate = $("<dd>").text("+ Rating: " + data[i].rating);
+            catRate.addClass("catRate");
+            // catRate.attr("data-id", data[i].rating);
+            let catPrice = $("<dd>").text("+ Price Range: " + data[i].price);
+            catPrice.addClass("catPrice");
+            // catPrice.attr("data-id", data[i].price);
+            let line = $("<hr>");
             let createBtn = $("<button>").text("Add to Itinerary")
+                // let newBtnClass = ("createEventBtn" + [i]);
+            createBtn.addClass("create-event");
+            createBtn.attr("data-id", ("create-event" + [i]));
+            $(".uk-modal-title").text("Check out these awesome results we found for you.")
 
-            row.append(catName, catAdd, catRate, catPrice, createBtn);
-            console.log(row);
-            $("#category").append(row);
+            newRow.append(catName, catAdd, catRate, catPrice, createBtn, line);
+
+            // console.log(newRow);
+            $("#category").append(newRow);
         };
-
     });
 }
 
-// function addCategory (catContainer) {
 
-//     for (let i = 0; i < data.length; i++) {
-//         console.log(data[i]);
+$(document).on("click", "button.create-event", function() {
 
-//         }
-// }
-
-// console.log(categoryContainer);
-// $("#category").append(categoryContainer);
-
-// let newSelectCat = $("<dl>");
-// newSelectCat.addClass("uk-description-list uk-description-list-divider");
-// let newSelectName = $("<dt>");
-// newSelectName.addId("catName");
-// let newSelectAdd = $("<dd>");
-// newSelectAdd.addId("catAdd");
-// let newSelectRate = $("<dt>");
-// newSelectRate.addId("catRate");
-// let newSelectPrice = $("<dd>");
-// newSelectPrice.addId("catPrice");
-// let addBtn = $("<button>");
-// addBtn.text("Add to Itinerary");
-// addBtn.addClass("create-event");
-// return ;
+    let addNow = $(this).parent().data();
+    let addNewName = addNow.id;
+    console.log(addNewName);
+    let newAdd = $("<li>").text(addNewName);
+    $("#event-group").append(newAdd);
+    UIkit.modal($("#catModal")).hide();
+})
